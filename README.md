@@ -8,6 +8,19 @@ Este proyecto estará completamente funcional una vez aprobado.
 - Sistema de autenticación Bearer
 - WebSockets mejorados
 
+### Versión actual (esperando aprobación):
+- Usa el archivo `future_api.py` preparado
+- Compatible con autenticación Bearer
+- WebSockets con nueva estructura
+
+### Cuando aprueben tu app:
+1. Reemplaza tu `STREAMLABS_TOKEN` por el `ACCESS_TOKEN`
+2. Usa la autenticación Bearer
+3. El sistema funcionará automáticamente
+
+### Archivos preparados:
+- `future_api.py` - Integración con API v2.0
+- `main.py` - Versión actual (mientras esperas)
 _________________________________________
 
 # StreamAlert Overlay
@@ -41,6 +54,7 @@ _________________________________________
 stream_alerts/
 ├── main.py              # Tu script principal
 ├── config.py            # Configuración (tokens, escenas)
+├── future_api.py        # ✨ NUEVO ARCHIVO PARA LA VERSIÓN FUTURA
 ├── requirements.txt     # Dependencias
 └── videos/              # Carpeta para videos (opcional) 
 ```
