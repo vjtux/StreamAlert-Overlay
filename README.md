@@ -37,15 +37,42 @@ stream_alerts/
   python main.py
 ```
 ## ⚙️ CONFIGURACIÓN EN OBS: 
-Activar WebSocket: 
-    1. OBS → Herramientas → WebSocket Server Settings
-    2. Marca "Enable WebSocket server"
-    3. Puerto: 4444
-    4. Establece una contraseña segura
-Crear escenas: 
-  1. "Principal" - Tu escena normal
-  2. "AlertaVideo" - Escena con tu video de alerta
+1. Crear la fuente de video overlay: 
+    1. En tu escena principal (y en todas las que uses):
+    2. Click en "+" → "Fuente de medios"
+    3. Nombre: "AlertaVideoOverlay" (mismo que en config.py)
+    4. Configura tu video:
+       - Selecciona tu archivo de video
+       - Marca "Reiniciar reproducción al activar"
+       - Ajusta posición y tamaño
 
+2. Configurar el overlay:
+   - Posición: Donde quieras que aparezca el video
+   - Tamaño: Ajusta según tu diseño
+   - Filtros: Puedes añadir efectos como borde, sombra, etc.
+
+3. Importante:
+   - La fuente debe estar oculta por defecto (desmarcada la casilla de visibilidad)
+   - El script se encargará de mostrar/ocultar automáticamente
+
+## 🎨 TIPS PARA EL VIDEO OVERLAY:
+Formato recomendado:
+- MP4 con codec H.264
+- Resolución: 1920x1080 o menor
+- Duración: 8-15 segundos (ajusta ALERT_DURATION)
+
+Estilo recomendado:
+- Fondo transparente o con efecto de entrada/salida
+- Animación de aparición suave
+- Coordinado con el estilo de tus alertas de StreamLabs
+    
+## 🚀 VENTAJAS DE ESTE MÉTODO: 
+    ✅ No cambia de escena - mantiene el flujo natural
+    ✅ Funciona en cualquier escena que tenga la fuente
+    ✅ Se combina con las alertas existentes de StreamLabs
+    ✅ Más profesional - sin cortes de escena
+     
+     
 ## 🎯 CONFIGURACIÓN FINAL:
 - En config.py, reemplaza:
 ```python
