@@ -15,14 +15,15 @@
 
 ## 🚀 Instalación
 - Requerimientos:
-    obs-websocket-py==1.0
-    requests==2.31.0
-    websocket-client==1.6.1
+    - obs-websocket-py==1.0
+    - requests==2.31.0
+    - websocket-client==1.6.1
   
 - Instalación de dependencias:
     en windows en el powershell:
-      "pip install websocket-client requests obs-websocket-py"
-  
+  ```bash
+      pip install websocket-client requests obs-websocket-py
+  ```
 - ESTRUCTURA DE ARCHIVOS RECOMENDADA:
 ```
 stream_alerts/
@@ -32,8 +33,9 @@ stream_alerts/
 └── videos/              # Carpeta para videos (opcional) 
 ```
 - Ejecutar el Script:
-    "python main.py"
-  
+```bash
+  python main.py
+```
 ## ⚙️ CONFIGURACIÓN EN OBS: 
 Activar WebSocket: 
     1. OBS → Herramientas → WebSocket Server Settings
