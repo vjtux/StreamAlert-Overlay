@@ -17,3 +17,6 @@ ALERT_TYPES = ["follow", "subscription", "donation", "host"]
 
 # Ruta al video (opcional, si quieres cambiar el video)
 VIDEO_FILE_PATH = ""  # Dejar vacío si ya está configurado en OBS
+
+# Para debug - mostrar mensajes recibidos
+DEBUG_MODE = False
