@@ -20,3 +20,7 @@ VIDEO_FILE_PATH = ""  # Dejar vacío si ya está configurado en OBS
 
 # Para debug - mostrar mensajes recibidos
 DEBUG_MODE = False
+
+# En config.py - cuando te aprueben
+#STREAMLABS_ACCESS_TOKEN = "tu_nuevo_access_token_aqui"  # Bearer token
+#USE_NEW_API = True  # Flag para cambiar entre versiones
