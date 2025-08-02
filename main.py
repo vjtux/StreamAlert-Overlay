@@ -58,23 +58,49 @@ class StreamAlerts:
     def on_message(self, ws, message):
         """Maneja los mensajes recibidos de StreamLabs"""
         try:
+            # Debug: mostrar mensajes recibidos (opcional)
+            # print(f"📥 Mensaje recibido: {message}")
+            #if config.DEBUG_MODE:
+            #    print(f"📥 Raw message: {message}")
+
             data = json.loads(message)
+        
+            # Verificar que sea un diccionario válido
+            if not isinstance(data, dict):
+                return
             
-            if 'type' in data and data['type'] in config.ALERT_TYPES:
+            # Verificar si es un mensaje de sistema (ping, etc.)
+            if 'type' not in data:
+                return
+            
+            # Procesar alertas
+            if data['type'] in config.ALERT_TYPES:
                 alert_type = data['type']
-                alert_message = data.get('message', [{}])[0] if data.get('message') else {}
-                
-                print(f"🔔 Nueva alerta [{alert_type}]: {alert_message.get('name', 'Anónimo')}")
-                
-                # Ejecutar en thread separado para no bloquear
+            
+                # Extraer información del usuario
+                username = "Anónimo"
+            
+                # Diferentes formatos de mensaje de StreamLabs
+                if 'message' in data and isinstance(data['message'], list) and len(data['message']) > 0:
+                    msg_data = data['message'][0]
+                    if isinstance(msg_data, dict):
+                        username = msg_data.get('name') or msg_data.get('username') or msg_data.get('displayName') or "Anónimo"
+                elif 'event' in data and isinstance(data['event'], dict):
+                    username = data['event'].get('name') or data['event'].get('username') or "Anónimo"
+            
+                print(f"🔔 Nueva alerta [{alert_type}]: {username}")
+            
+                # Ejecutar en thread separado
                 alert_thread = threading.Thread(target=self.show_alert_video)
                 alert_thread.daemon = True
                 alert_thread.start()
-                
+            
         except json.JSONDecodeError:
-            pass  # Mensajes de sistema, ignorar
+            # Mensajes de sistema WebSocket, ignorar
+            pass
         except Exception as e:
             print(f"❌ Error procesando mensaje: {e}")
+            #print(f"📝 Mensaje completo: {message}")  # Descomentar para debug
 
     def on_error(self, ws, error):
         print(f"❌ Error de WebSocket: {error}")
