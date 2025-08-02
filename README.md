@@ -47,7 +47,7 @@ _________________________________________
 - Instalación de dependencias:
     en windows en el powershell:
   ```bash
-      pip install websocket-client requests obs-websocket-py
+  pip install websocket-client requests obs-websocket-py
   ```
 - Instalación de dependencias por medio del archivo `requirements.txt`
   ```bash
@@ -65,7 +65,7 @@ stream_alerts/
 ```
 - Ejecutar el Script:
 ```bash
-  python main.py
+python main.py
 ```
 ## ⚙️ CONFIGURACIÓN EN OBS: 
 1. Crear la fuente de video overlay: 
