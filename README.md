@@ -49,6 +49,9 @@ _________________________________________
   ```bash
       pip install websocket-client requests obs-websocket-py
   ```
+- Instalación de dependencias por medio del archivo `requirements.txt`
+      ```pip install -r requirements.txt```
+  
 - ESTRUCTURA DE ARCHIVOS RECOMENDADA:
 ```
 stream_alerts/
