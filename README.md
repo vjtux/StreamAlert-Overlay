@@ -24,12 +24,13 @@
       "pip install websocket-client requests obs-websocket-py"
   
 - ESTRUCTURA DE ARCHIVOS RECOMENDADA:
-    stream_alerts/
-    ├── main.py              # Tu script principal
-    ├── config.py            # Configuración (tokens, escenas)
-    ├── requirements.txt     # Dependencias
-    └── videos/              # Carpeta para videos (opcional) 
-
+```
+stream_alerts/
+├── main.py              # Tu script principal
+├── config.py            # Configuración (tokens, escenas)
+├── requirements.txt     # Dependencias
+└── videos/              # Carpeta para videos (opcional) 
+```
 - Ejecutar el Script:
     "python main.py"
   
@@ -45,10 +46,11 @@ Crear escenas:
 
 ## 🎯 CONFIGURACIÓN FINAL:
 - En config.py, reemplaza:
-    STREAMLABS_TOKEN = "tu_token_real_aqui"
-    OBS_PASSWORD = "tu_contraseña_real"
-    ALERT_SCENE = "AlertaVideo"
-    NORMAL_SCENE = "Principal"
-       
+```python
+STREAMLABS_TOKEN = "tu_token_real_aqui"
+OBS_PASSWORD = "tu_contraseña_real"
+ALERT_SCENE = "AlertaVideo"
+NORMAL_SCENE = "Principal"
+```       
 ## ❤️ Agradecimientos
 Script desarrollado con IA Qwen3-coder https://chat.qwen.ai/ y la ayuda de VjYuX - ¡Gracias por la colaboración!
