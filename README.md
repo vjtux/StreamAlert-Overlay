@@ -53,4 +53,4 @@ ALERT_SCENE = "AlertaVideo"
 NORMAL_SCENE = "Principal"
 ```       
 ## ❤️ Agradecimientos
-Script desarrollado con IA Qwen3-coder https://chat.qwen.ai/ y la ayuda de VjYuX - ¡Gracias por la colaboración!
+Script desarrollado con IA Qwen3-coder https://chat.qwen.ai/ y la ayuda de VjTuX - ¡Gracias por la colaboración!
