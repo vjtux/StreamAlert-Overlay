@@ -1,7 +1,4 @@
-"""
-StreamLabs API v2.0 Integration
-Este archivo se usará cuando aprueben tu aplicación
-"""
+"""StreamLabs API v2.0 Integration Este archivo se usará cuando aprueben tu aplicación"""
 
 import requests
 import websocket
@@ -151,4 +148,5 @@ def start_future_version(access_token):
         print("✅ API v2.0 funcionando correctamente")
         # Aquí iría la lógica de WebSocket con nueva autenticación
     else:
+
         print("❌ Error con API v2.0 - verifica tu access_token")
