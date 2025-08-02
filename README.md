@@ -1,3 +1,15 @@
+## 🚧 Estado del proyecto
+⚠️ **En espera de aprobación de StreamLabs**
+StreamLabs actualizó su API el 2024 y requiere aprobación de aplicaciones.
+Este proyecto estará completamente funcional una vez aprobado.
+
+✅ **Funcionalidad preparada**
+- Código compatible con nueva API v2.0
+- Sistema de autenticación Bearer
+- WebSockets mejorados
+
+_________________________________________
+
 # StreamAlert Overlay
 
 🎨 **Overlay de video para alertas de StreamLabs - Muestra videos personalizados sobre cualquier escena de OBS**
