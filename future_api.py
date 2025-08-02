@@ -1,4 +1,7 @@
-"""StreamLabs API v2.0 Integration Este archivo se usará cuando aprueben tu aplicación"""
+"""
+StreamLabs API v2.0 Integration
+Este archivo se usará cuando aprueben tu aplicación
+"""
 
 import requests
 import websocket
@@ -11,11 +14,9 @@ import config
 class StreamLabsAPIv2:
     def __init__(self, access_token):
         self.access_token = access_token
-        self.base_url = "https://streamlabs.com/api/v2.0"
-        self.socket_url = "wss://sockets.streamlabs.com/socket.io/"
-        
+        self.base_url = "https://streamlabs.com/api/v2.0"  # Quitar espacio
+    
     def get_headers(self):
-        """Headers para autenticación Bearer"""
         return {
             "Authorization": f"Bearer {self.access_token}",
             "Content-Type": "application/json"
@@ -23,17 +24,17 @@ class StreamLabsAPIv2:
     
     def test_connection(self):
         """Testear conexión con la API v2.0"""
-        try:
+        try: 
             response = requests.get(
                 f"{self.base_url}/user",
                 headers=self.get_headers()
             )
-            response.raise_for_status()
+            response.raise_for_status()  # ⭐ Buena práctica
             return response.json()
         except Exception as e:
             print(f"❌ Error en conexión API v2.0: {e}")
             return None
-    
+
     def connect_websocket(self):
         """Conexión WebSocket con Bearer Token"""
         # En la nueva versión, el token va en headers, no en query params
@@ -148,5 +149,4 @@ def start_future_version(access_token):
         print("✅ API v2.0 funcionando correctamente")
         # Aquí iría la lógica de WebSocket con nueva autenticación
     else:
-
         print("❌ Error con API v2.0 - verifica tu access_token")
